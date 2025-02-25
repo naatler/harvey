@@ -1,0 +1,143 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif JP', sans-serif;
+    position: relative;
+    background: #1f4037;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container{
+    width: 50%;
+    height: 400px;
+    padding-bottom: 40rem;
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    border: none;
+    border-radius: 10px ;
+}
+  
+.nav  .nav-header {
+    width: 50%;
+    display: inline;
+}
+  
+.nav  .nav-header  .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px;
+    font-family: "Poppins",sans-serif;
+}
+  
+.nav  .nav-btn {
+    display: none;
+}
+  
+.nav  .nav-links {
+    width: 50%;
+    display: inline-flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+}
+  
+.nav  .nav-links  a {
+    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+  
+.nav  .nav-links  a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+  
+.nav  #nav-check {
+    display: none;
+}
+  
+@media (max-width:600px) {
+    .nav  .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav  .nav-btn  label {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+      border: none;
+      border-top-right-radius: 10px;
+    }
+    .nav  .nav-btn  label:hover,.nav  #nav-check:checked ~ .nav-btn  label {
+      background-color: rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    .nav  .nav-btn  label  span {
+      display: block;
+      width: 25px;
+      height: 5px;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+    .nav  .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav  .nav-links  a {
+      display: block;
+      width: 100%;
+      padding-left: 20px;
+    }
+    .nav  #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav  #nav-check:checked ~ .nav-links {
+      height: 250px;
+      overflow-y: hidden;
+    }
+}
+
+.attribute{
+    position: absolute;
+    bottom: 10px;
+}
